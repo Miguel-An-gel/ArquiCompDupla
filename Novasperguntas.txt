@@ -1,0 +1,17 @@
+- Qual componente executa instruções de programas, desde cálculos até o controle de componentes como memória e dispositivos de entrada e saída?
+
+Qual componente é considerado um dos principais em processadores, que realiza operações aritméticas (como adição, subtração) e lógicas (como AND, OR, NOT, XOR) sobre os dados de entrada?
+
+O que está localizado dentro da CPU que armazena dados temporários, instruções ou endereços de memória durante o processamento?
+
+Qual memoria utilizada para o armazenamento de dados temporarios enquanto o computador estiver ligado?
+
+Qual memória que armazena informações essenciais, como o firmware do sistema, que não pode ser modificada pelo usuário?
+
+Qual memoria que poder ser apagada (com luz ultravioleta) e reprograma?
+
+Qual memoria é utilizada em dispositivos como SSDs e pendrives, permitindo a leitura e escrita rapida ?
+
+Qual a memoria não volatil de longo prazo, como disco rigido, SSDs e CDs, que mantem os dados mesmo apos o computador ser desligado ?
+
+Qual tecnica que permite que dispositivos de hardware acessem a memoria principal sem passar pela CPU, Melhorando em operações a entrada/saida e tranferencias de dados ?
