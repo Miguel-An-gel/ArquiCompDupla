@@ -14,8 +14,10 @@ padding: 0;
 }
 
 body{
+    background-image: url(/img/background.jpg);
 background-color: #D7E6EB;
 font-family: monospace;
+
 }
 header h1{
 text-align: center;
@@ -24,7 +26,7 @@ font-size: 30px;
 
 
 table {
-    border: 1px #1F618D solid;
+    border: 5px #eca890 solid;
     font-size:25px; 
     margin-left: 130px;
     margin: auto;
@@ -45,7 +47,8 @@ td {
 
 button{
     border: 0px;
-    background-color: #EC7063;
+    background-color: #142434;
+    
     color: #ffffff;
     padding: 10px;
     font-size: 20px;
@@ -56,8 +59,16 @@ button{
     width: 1100px;
     margin: auto;
 }
+.container h1{
+    color: #000000;
+    font-weight: bold;
+    font-size: 50px;
+    
+}
 
 #div_game{
+    background-image: url(/img/palavra.jpg);
+    background-size: 100%;
     background-color: #ffffff;
     margin: auto;
     
@@ -66,7 +77,9 @@ button{
 }
 
 #div_questions{
-background-color:#85C1E9;
+background-color:#142434;
+border: 2px solid #eca890;
+color: #ffffff;
 width: 700px;
 margin: auto;
 }
@@ -79,14 +92,17 @@ margin: auto;
 #button_verify{
     width: 100px;
     margin: auto;
+    background-color: #EC7063;
+
 }
 #input_answer{
     width: 100px;
     margin: auto;
+    padding: 2px;
 }
 
 .deadCell{
-    background-color: #1F618D;
+    background-color: #142434;
 }
 .availableCell{
     background-color: #ffffff;
@@ -100,6 +116,8 @@ footer{
     margin-bottom: 0;
     padding: 0;
     bottom: 0;
+    width: 100%;
+    position:relative;
 }
 footer p{
     text-align: center;
@@ -108,8 +126,15 @@ footer p{
 #div_information{
     width: 500px;
     margin: auto;
-    background-color: #85C1E9;
+    padding: 10px ;
+    
+    background-color: #142434;
     font-size: 20px;
+    color: #ffffff;
+    
+}
+#div_information h2{
+    text-align: center;
 }
 
 
@@ -157,6 +182,7 @@ footer p{
                 <h3>Resposta Correta</h3>
             </div>
             <div id="div_game">
+                
                 <br>
                 <div id="div_information">
                     <h2>Intruções do Jogo</h2><br><br>
@@ -173,7 +199,7 @@ footer p{
                 <br>
                 <div style="display: none" id="div_questions">
                     <center>
-                        <span id="span_questionText">Vamos encontrar as esferas do dragao</span>
+                        <span id="span_questionText">Vamos encontrar as esferas do dragao</span><br>
                         <input type="text" id="input_answer" placeholder="Sua Reposta"><br>
                         <button id="button_verify" onclick="verify()" class="button">Verificar</button>
                     </center>
@@ -193,7 +219,7 @@ footer p{
         </div>
     </footer>
     <script>
-    var special_words = ['CPU', 'ULA', 'Registradores', 'RAM', 'ROM', 'EPROM', 'FLASH', 'Memória de Massa', 'DMA', 'CS', 'Adress Bus', 'Data Bus', 'I5', 'I7', 'Dual Core', 'Quad Core'];
+    var special_words = ['CPU', 'ULA', 'REGISTRADORES', 'RAM', 'ROM', 'EPROM', 'FLASH', 'MEMÓRIA EM MASSA', 'DMA', 'CS', 'ANDRESS BUS', 'DATA BUS', 'I5', 'I7', 'DUAL CORE', 'QUAD CORE'];
 
 /*var questions_list = [
     'Qual é a sigla para Central Process Unit?',
@@ -214,22 +240,22 @@ footer p{
     'Segue o mesmo princípio de um dual-core, mas agora em teoria tem o dobro da capacidade de processamento'
 ];*/
 var questions_list = [
-'Qual componente executa instruções de programas, desde cálculos até o controle de componentes como memória e dispositivos de entrada e saída?',
-'Qual componente é considerado um dos principais em processadores, que realiza operações aritméticas (como adição, subtração) e lógicas (como AND, OR, NOT, XOR) sobre os dados de entrada?',
-'O que está localizado dentro da CPU que armazena dados temporários, instruções ou endereços de memória durante o processamento?',
-'Qual memória é utilizada para o armazenamento de dados temporários enquanto o computador estiver ligado?',
-'Qual memória armazena informações essenciais, como o firmware do sistema, que não pode ser modificada pelo usuário?',
-'Qual memória pode ser apagada (com luz ultravioleta) e reprogramada?',
-'Qual memória é utilizada em dispositivos como SSDs e pendrives, permitindo a leitura e escrita rápidas?',
-'Qual a memória não volátil de longo prazo, como disco rígido, SSDs e CDs, que mantém os dados mesmo após o computador ser desligado?',
-'Qual técnica permite que dispositivos de hardware acessem a memória principal sem passar pela CPU, melhorando as operações de entrada/saída e transferências de dados?',
-'Como é chamado o sinal que ativa um chip específico em um circuito eletrônico?',
-'Qual barramento transporta os endereços de memória ou dispositivos que a CPU deseja acessar?',
-'Qual é o barramento que transporta os dados reais que são lidos ou gravados entre diferentes componentes do sistema, como processador, memória e dispositivos de entrada/saída?',
-'Qual processador da Intel é conhecido por oferecer um bom equilíbrio entre desempenho e custo, ideal para tarefas do dia a dia?',
-'Qual processador da Intel é conhecido por oferecer alto desempenho, adequado para multitarefa e aplicações mais exigentes?',
-'Qual tipo de processador possui dois núcleos, permitindo executar duas tarefas ao mesmo tempo?',
-'Qual tipo de processador possui quatro núcleos, permitindo executar várias tarefas ao mesmo tempo?'
+`COM 3 LETRAS <br> Qual componente executa instruções de programas, desde cálculos até o controle de componentes como memória e dispositivos de entrada e saída, considerado o cerebro com computador?`,
+'COM 3 LETRAS <br> Qual componente é considerado um dos principais em processadores, que realiza operações aritméticas (como adição, subtração) e lógicas (como AND, OR, NOT, XOR) sobre os dados de entrada?',
+'COM 13 LETRAS <br> O que está localizado dentro da CPU que armazena dados temporários, instruções ou endereços de memória durante o processamento?',
+'COM 3 LETRAS <br> Qual memória é utilizada para o armazenamento de dados temporários enquanto o computador estiver ligado?',
+'COM 3 LETRAS <br> Qual memória armazena informações essenciais, como o firmware do sistema, que não pode ser modificada pelo usuário?',
+'COM 5 LETRAS <br> Qual memória pode ser apagada (com luz ultravioleta) e reprogramada?',
+'COM 5 LETRAS <br> Qual memória é utilizada em dispositivos como SSDs e pendrives, permitindo a leitura e escrita rápidas?',
+'COM 16 LETRAS <br> Qual a memória não volátil de longo prazo, como disco rígido, SSDs e CDs, que mantém os dados mesmo após o computador ser desligado?',
+'COM 3 LETRAS <br> Qual técnica permite que dispositivos de hardware acessem a memória principal sem passar pela CPU, melhorando as operações de entrada/saída e transferências de dados?',
+'COM 2 LETRAS <br> Como é chamado o sinal que ativa um chip específico em um circuito eletrônico?',
+'COM 10 LETRAS <br> Qual barramento transporta os endereços de memória ou dispositivos que a CPU deseja acessar?',
+'COM 8 LETRAS <br> Qual é o barramento que transporta os dados reais que são lidos ou gravados entre diferentes componentes do sistema, como processador, memória e dispositivos de entrada/saída?',
+'COM 2 LETRAS <br> Qual processador da Intel é conhecido por oferecer um bom equilíbrio entre desempenho e custo, ideal para tarefas do dia a dia?',
+'COM 2 LETRAS <br> Qual processador da Intel é conhecido por oferecer alto desempenho, adequado para multitarefa e aplicações mais exigentes?',
+'COM 9 LETRAS <br> Qual tipo de processador possui dois núcleos, permitindo executar duas tarefas ao mesmo tempo?',
+'COM 9 LETRAS <br> Qual tipo de processador possui quatro núcleos, permitindo executar várias tarefas ao mesmo tempo?'
 ]
 
 var filledCell = [2, 20, 38, 133, 134, 135, 59, 77, 95, 113, 131, 149,
@@ -268,7 +294,7 @@ var word = {
                 findCell.innerHTML = word.word2.letter[i];
                 console.log(word.word2.letter[i]);
             }
-            cell_133.innerHTML = '<span style="color: red; font-size:10px">2</span>U';
+            cell_133.innerHTML = '<span style="color: red; font-size:10px;">2</span>U';
 
         }
     },
@@ -603,7 +629,7 @@ function paintCells() {
 }
 
 function verify() {
-    var answer = input_answer.value;
+    var answer = input_answer.value.toUpperCase();
 
     if (answer != '') {
         // answer = answer.toLowerCase();
